@@ -7,6 +7,8 @@ import ClickEvents_Func from './components/ClickEvents_Func';
 import StatesFunctionComp from './components/StatesFunctionComp';
 import StatesClassComp from './components/StatesClassComponent';
 import Props_FuncComp from './components/Props_FuncComp';
+import GetDataInputFiled from './components/GetDataInputFiled';
+import FormHandling from './components/FormHandling';
 
 
 
@@ -22,7 +24,12 @@ function App() {
       {/* <StatesFunctionComp/>
       <StatesClassComp/> */}
 
-      <Props_FuncComp name = 'Salman'/>
+      {/* <Props_FuncComp name = 'Salman'/> */}
+
+
+      {/* <GetDataInputFiled/> */}
+
+      <FormHandling/>
     </div>
   );
 }
