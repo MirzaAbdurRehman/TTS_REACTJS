@@ -13,7 +13,13 @@ import ArrayListing from './components/ArrayListing';
 import ArrayListingBootstrap from './components/ArrayListingBootstrap';
 import FunctionAsProps from './components/FunctionAsProps';
 import FormHandlingvalid from './components/function FormHandlingvalid';
-
+import Pure_component from './components/Pure_component';
+import MemoHooks from './components/MemoHooks';
+import LiftingStateUp from './components/LiftingStateUp';
+import React, { useState } from 'react';
+import ComponentDidMount from './ClassBasedComponentsLifeCycle/ComponentDidMount';
+import ComponentDidUpdate from './ClassBasedComponentsLifeCycle/ComponentDidUpdate';
+import ShouldComponentUpdate from './ClassBasedComponentsLifeCycle/ShouldComponentUpdate';
 
 
 function App() {
@@ -21,10 +27,37 @@ function App() {
   function getData(name, age, location){
     alert(`Helloq...!  Name: ${name} \n Age: ${age} \n Location: ${location}`);
   }
+
+  const [message, setMessage] = useState("Hey");
+
+  // Function that will be passed to the child
+  const handleDataFromChild = (childData) => {
+    setMessage(childData);
+  };
   return (
     <div className="App">
 
-      <FormHandlingvalid/>
+
+      <ShouldComponentUpdate/>
+
+
+      {/* <ComponentDidUpdate/> */}
+
+      {/* <ComponentDidMount/> */}
+
+      {/* <h2>Parent Component</h2> */}
+      {/* <p>Message from Child: {message}</p> */}
+
+      {/* Passing function as prop to child */}
+
+
+      {/* <LiftingStateUp sendDataToParent={handleDataFromChild} /> */}
+
+     {/* <MemoHooks/> */}
+
+      {/* <Pure_component/> */}
+
+      {/* <FormHandlingvalid/> */}
 
       {/* <FunctionAsProps data = {getData} name = 'Ali' age = {26} location = 'Islamabad' /> */}
 
