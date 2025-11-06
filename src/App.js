@@ -20,6 +20,14 @@ import React, { useState } from 'react';
 import ComponentDidMount from './ClassBasedComponentsLifeCycle/ComponentDidMount';
 import ComponentDidUpdate from './ClassBasedComponentsLifeCycle/ComponentDidUpdate';
 import ShouldComponentUpdate from './ClassBasedComponentsLifeCycle/ShouldComponentUpdate';
+import ComponentDidUnmount from './ClassBasedComponentsLifeCycle/ComponentDidUnmount';
+import UseEffect from './FunctionalBasedComponentLifeCycle/UseEffect';
+import UseEffectWithProps from './FunctionalBasedComponentLifeCycle/UseEffectWithProps';
+import UseEffectWithConditions from './FunctionalBasedComponentLifeCycle/UseEffectWithConditions';
+import Data_fetching_api from './Apis/Data_fetching_api';
+import ReUse from './components/ReUse';
+import Employee from './components/Employee';
+import FetchingApi from './Apis/FetchingApi';
 
 
 function App() {
@@ -30,6 +38,12 @@ function App() {
 
   const [message, setMessage] = useState("Hey");
 
+  const [count, setCount] = useState(0);
+
+
+  const [age, setAge] = useState(22);
+  const [count2, setCount2] = useState(1);
+
   // Function that will be passed to the child
   const handleDataFromChild = (childData) => {
     setMessage(childData);
@@ -38,7 +52,27 @@ function App() {
     <div className="App">
 
 
-      <ShouldComponentUpdate/>
+      <FetchingApi/>
+
+
+      {/* <ReUse/> */}
+
+      {/* <Data_fetching_api/> */}
+
+
+      {/* <UseEffectWithConditions age = {age} count2 = {count2} />
+      <button onClick={() => setAge(age + 1)}>Update Age</button>
+      <button onClick={() => setCount2(count2 + 1)}>Update Count</button> */}
+
+
+ 
+      {/* <UseEffect/> */}
+
+
+      {/* <ComponentDidUnmount/> */}
+
+
+      {/* <ShouldComponentUpdate/> */}
 
 
       {/* <ComponentDidUpdate/> */}

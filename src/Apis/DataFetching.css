@@ -1,0 +1,50 @@
+/* Container styling */
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f8faff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* Table styling */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.styled-table thead tr {
+  background-color: #007bff;
+  color: white;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f1f8ff;
+  transition: background-color 0.3s ease;
+}
+
+/* Loading animation */
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-top: 100px;
+}
