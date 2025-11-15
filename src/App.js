@@ -24,10 +24,11 @@ import ComponentDidUnmount from './ClassBasedComponentsLifeCycle/ComponentDidUnm
 import UseEffect from './FunctionalBasedComponentLifeCycle/UseEffect';
 import UseEffectWithProps from './FunctionalBasedComponentLifeCycle/UseEffectWithProps';
 import UseEffectWithConditions from './FunctionalBasedComponentLifeCycle/UseEffectWithConditions';
-import Data_fetching_api from './Apis/Data_fetching_api';
+import Data_fetching_api from './Fetch_Api_Method/Data_fetching_api';
 import ReUse from './components/ReUse';
 import Employee from './components/Employee';
-import FetchingApi from './Apis/FetchingApi';
+import FetchingApi from './Fetch_Api_Method/FetchingApi';
+import Product_Add from './Axios_Api_Method/Product_Add';
 
 
 function App() {
@@ -52,7 +53,10 @@ function App() {
     <div className="App">
 
 
-      <FetchingApi/>
+      <Product_Add/>
+
+
+      {/* <FetchingApi/> */}
 
 
       {/* <ReUse/> */}
