@@ -29,6 +29,8 @@ import ReUse from './components/ReUse';
 import Employee from './components/Employee';
 import FetchingApi from './Fetch_Api_Method/FetchingApi';
 import Product_Add from './Axios_Api_Method/Product_Add';
+import Product_list from './Axios_Api_Method/ProductList';
+import ProductList from './Axios_Api_Method/ProductList';
 
 
 function App() {
@@ -53,7 +55,10 @@ function App() {
     <div className="App">
 
 
-      <Product_Add/>
+     <ProductList/>
+
+
+      {/* <Product_Add/> */}
 
 
       {/* <FetchingApi/> */}
