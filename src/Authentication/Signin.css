@@ -1,0 +1,97 @@
+/* Dark Theme Signin Component Styles */
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0f0f0f;
+  padding: 20px;
+}
+
+.form-container {
+  background: #1a1a1a;
+  padding: 30px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  max-width: 350px;
+  border: 1px solid #333;
+  text-align: center;
+}
+
+.form-container h2 {
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.form-container input {
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: #252525;
+  color: #ffffff;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.form-container input:first-child {
+  border-color: #555;
+  background: #2a2a2a;
+}
+
+.form-container input:first-child::placeholder {
+  color: #999;
+}
+
+.form-container input:first-child:focus {
+  outline: none;
+  border-color: #888;
+  background: #303030;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.form-container input::placeholder {
+  color: #777;
+}
+
+.form-container input:focus {
+  outline: none;
+  border-color: #666;
+  background: #2d2d2d;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.08);
+}
+
+.form-container button {
+  padding: 12px;
+  background: #333333;
+  color: #ffffff;
+  border: 1px solid #555;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 10px;
+}
+
+.form-container button:hover {
+  background: #444444;
+  border-color: #666;
+}
+
+.form-container button:active {
+  background: #2a2a2a;
+}
