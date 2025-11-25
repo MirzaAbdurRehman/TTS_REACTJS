@@ -57,11 +57,14 @@ function App() {
     <div className="App">
 
 
+      <Signin/>
+
+
 
 
       {/* <Signin/> */}
 
-      <Signup/>
+      {/* <Signup/> */}
 
 
      {/* <ProductList/> */}
