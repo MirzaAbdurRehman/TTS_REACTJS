@@ -1,17 +1,18 @@
 
 
 import React, {useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';  
 import "./product_list.css";
 
 
 const ProductList = () => {
 
-
-
     const [products, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] =  useState(null);
+
+    const navigate = useNavigate();
 
 
     const getProductData = async () => {
@@ -25,11 +26,32 @@ const ProductList = () => {
             setLoading(false);
         }
     }
-
-
     useEffect(() => {
         getProductData();
-    }, [])
+    }, []);
+
+    const handleDelete = async (id, name) => {
+      if(window.confirm(`Are you sure you want to delete the product: ${name} ?`)){
+        try{
+          await axios.delete(`http://localhost:5001/api/products/productDelete/${id}`);
+          alert("Product deleted successfully");
+          // Refresh product list after deletion
+          getProductData();
+        }catch(error){
+          alert("Error deleting product");
+          console.error("Error deleting product:", error);
+        }
+    }};
+
+    const handleUpdate = (id) => {
+      // Navigate to update page or open update modal
+      navigate(`/update-product/${id}`);
+    }
+
+    if(loading) return <p>Loading products...</p>;
+    if(error) return <p>{error}</p>;
+
+
   return (
    <>
     <section className="wrapper">

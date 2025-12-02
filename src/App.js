@@ -33,18 +33,21 @@ import Product_list from './Axios_Api_Method/ProductList';
 import ProductList from './Axios_Api_Method/ProductList';
 import Signup from './Authentication/signup';
 import Signin from './Authentication/signin';
+import { Route, Router, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import UpdateProduct from './Axios_Api_Method/UpdateProduct';
 
 
 function App() {
 
   function getData(name, age, location){
-    alert(`Helloq...!  Name: ${name} \n Age: ${age} \n Location: ${location}`);
+    alert(`Hello...!  Name: ${name} \n Age: ${age} \n Location: ${location}`);
   }
 
   const [message, setMessage] = useState("Hey");
 
   const [count, setCount] = useState(0);
-
+ 
 
   const [age, setAge] = useState(22);
   const [count2, setCount2] = useState(1);
@@ -54,10 +57,28 @@ function App() {
     setMessage(childData);
   };
   return (
-    <div className="App">
 
 
-      <Signin/>
+    <Router>
+      <div className="App">
+        <Navbar/>
+
+        <Routes>
+          <Route path='/' element={<ProductList/>}/>
+
+          <Route path='/add-product' element={<Product_Add/>}/>
+
+          <Route path='/update-product/:id' element={<UpdateProduct/>}/>
+
+          <Route path='/signin' element={<Signin/>}/>
+
+          <Route path='/signup' element={<Signup/>}/>
+        </Routes>
+
+
+
+
+      {/* <ProductList/> */}
 
 
 
@@ -134,7 +155,15 @@ function App() {
       {/* <GetDataInputFiled/> */}
 
       {/* <FormHandling/> */}
-    </div>
+      </div>
+    </Router>
+
+
+      
+
+
+   
+   
   );
 }
 
