@@ -14,7 +14,7 @@ const Navbar = () => {
         </div>
         <div className='nav-links'>
             <Link to="/" className={location.pathname === "/" ? "active" : ""}>All Product</Link>
-            <Link to="/add-product" className={location.pathname === "/add-product" ? "active" : ""}>Product List</Link>
+            <Link to="/add-product" className={location.pathname === "/add-product" ? "active" : ""}>Add Product</Link>
             <Link to="/signin" className={location.pathname === "/signin" ? "active" : ""}>Signin</Link>
             <Link to="/signup" className={location.pathname === "/signup" ? "active" : ""}>Signup</Link>
         </div>

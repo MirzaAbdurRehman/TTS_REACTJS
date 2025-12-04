@@ -33,7 +33,7 @@ import Product_list from './Axios_Api_Method/ProductList';
 import ProductList from './Axios_Api_Method/ProductList';
 import Signup from './Authentication/signup';
 import Signin from './Authentication/signin';
-import { Route, Router, Routes } from 'react-router-dom';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import UpdateProduct from './Axios_Api_Method/UpdateProduct';
 
@@ -59,7 +59,7 @@ function App() {
   return (
 
 
-    <Router>
+    <BrowserRouter>
       <div className="App">
         <Navbar/>
 
@@ -156,7 +156,7 @@ function App() {
 
       {/* <FormHandling/> */}
       </div>
-    </Router>
+    </BrowserRouter>
 
 
       

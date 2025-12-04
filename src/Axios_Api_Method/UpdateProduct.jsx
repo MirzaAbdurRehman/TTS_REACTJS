@@ -36,7 +36,7 @@ const UpdateProduct = () => {
   const fetchProduct = async (productId) => {
     try {
       setFetching(true);
-      const res = await axios.get(`http://localhost:5000/product/${productId}`);
+      const res = await axios.get(`http://localhost:5001/api/products/productlist/${productId}`);
       const p = res.data;
 
       setFormData({
@@ -74,7 +74,7 @@ const UpdateProduct = () => {
   const checkSku = async (sku, productId) => {
     if (!sku) return true;
     try {
-      const res = await axios.get(`http://localhost:5000/check-sku/${sku}`);
+      const res = await axios.get(`http://localhost:5001/api/products/checkSKU/${sku}`);
       return !(res.data.exists && res.data.productId !== productId);
     } catch {
       return false;
@@ -108,7 +108,7 @@ const UpdateProduct = () => {
 
     try {
       const res = await axios.put(
-        `http://localhost:5000/updateproduct/${id}`,
+        `http://localhost:5001/api/products/productListUpdate/${id}`,
         data,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
